@@ -1,0 +1,41 @@
+@import '../../common/styl/variables.styl'
+
+.user-lists
+  display flex
+  position relative     // hack for instagram browser
+  position sticky
+  bottom 0
+  z-index $z-index--above
+  margin-top $indent-3
+
+  &:focus
+    outline none
+
+  &__container
+    z-index $z-index--above-2
+    padding $indent-2 0
+    display flex
+    min-width 100%
+    overflow auto
+    background-color $color-white
+
+  &__add-button-container
+    flex 1
+    text-align right
+    padding-right $indent-3
+
+  &__add-button
+    width $list-adder-height
+    height 100%
+    border $border-grey
+    background-color transparent
+    cursor pointer
+    resize none
+
+    &::after
+      content '+'
+      display block
+
+    &:active
+    &:focus
+      outline none

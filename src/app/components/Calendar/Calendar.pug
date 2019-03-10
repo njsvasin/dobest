@@ -1,0 +1,22 @@
+task-adder((taskAdd)="addTask($event)")
+
+calendar-dates(#calendarDates)
+
+.tasks-container
+  task-group.tasks-container__item
+    ng-container(*ngFor="let task of tasksToDo; let i = index;")
+      task([task]="task", (taskChange)="changeTaskPatternAndDone($event)", [listIndex]="i",
+      (taskMoved)="onTaskMoved($event, i, task.tasksId)", [userLists]="userLists",
+      (taskRemove)="removeTask($event)", #sortableTask,)
+
+  .calendar__show-hide-row
+    span.calendar__show-hide-removed((click)="showHideRemoved()")
+      | {{options.showRemovedTasks ? 'Скрыть' : 'Показать'}} завершённые
+
+  task-group.tasks-container__item
+    ng-container(*ngIf="options.showRemovedTasks && tasksDone?.length")
+      ng-container(*ngFor="let task of tasksDone; let i = index;")
+        task([task]="task", [disableMoving]="true", (taskChange)="changeTaskPatternAndDone($event)",
+        (taskRemove)="removeTask($event)")
+
+user-lists(#userLists)

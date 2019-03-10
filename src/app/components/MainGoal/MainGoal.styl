@@ -1,0 +1,39 @@
+@import '../../common/styl/variables.styl'
+
+$indent-goal = 18px
+
+.main-goal
+  position relative
+  display block
+  min-height $indent-goal
+  margin $indent-2 $indent-body-padding
+  text-align center
+  letter-spacing 0.5px
+  font-size 0.9em
+  font-style italic
+
+  &__text
+    color $color-blue
+    cursor pointer
+
+    &--hidden
+      visibility hidden
+
+  &__input
+    position absolute
+    top 0
+    box-sizing border-box
+    width 100%
+    height $indent-goal
+    border none
+    border-radius $border-radius-xs
+    text-align center
+    letter-spacing 0.5px
+    font-family serif
+    font-size 1em
+    font-style italic
+    cursor pointer
+    visibility hidden
+
+    &--active
+      visibility initial

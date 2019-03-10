@@ -1,0 +1,22 @@
+{
+  "name": "Do Best!",
+  "short_name": "Do Best!",
+  "description": "Make your life better! Achieve YOUR goal!",
+  "icons": [{
+    "src": "/assets/icon192.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }, {
+    "src": "/assets/icon256.png",
+    "sizes": "256x256",
+    "type": "image/png"
+  }, {
+    "src": "/assets/icon512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#cff",
+  "theme_color": "#cff"
+}

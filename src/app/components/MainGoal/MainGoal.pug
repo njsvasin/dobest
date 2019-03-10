@@ -1,0 +1,4 @@
+span.main-goal__text((click)="onTextClick()", [class.main-goal__text--hidden]="showInput", [innerText]="mainGoal")
+
+input.main-goal__input([class.main-goal__input--active]="showInput", (keyup.enter)="onInputBlur()", (blur)="onInputBlur()",
+  #input, type="text", placeholder="{{mainGoalDefault}}", [(ngModel)]="mainGoal")

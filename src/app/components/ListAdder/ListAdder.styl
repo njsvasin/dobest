@@ -1,0 +1,48 @@
+@import '../../common/styl/variables.styl'
+
+.list-adder
+  display block
+  width 100%
+  box-sizing border-box
+  padding $indent-2 $indent-body-padding
+  position absolute
+  top 0
+  background-color $color-white
+  box-shadow $shadow-m-top
+  transition top $duration-m
+
+  &__form
+    position relative
+
+  &__input
+    box-sizing border-box
+    width 100%
+    height $list-adder-height
+    padding $indent-1 $indent-10 $indent-1 $indent-1
+    border $border-grey
+    border-radius $border-radius-s
+    font-size 16px
+    cursor pointer
+
+  &__submit-button
+    position absolute
+    top 50%
+    right 0
+    transform translateY(-50%)
+    width $indent-10
+    height 100%
+    border none
+    background-color transparent
+    cursor pointer
+    resize none
+
+    &::after
+      content '>'
+      display block
+
+    &:active
+    &:focus
+      outline none
+
+  &--active
+    top -100%

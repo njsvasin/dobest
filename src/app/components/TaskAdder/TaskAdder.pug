@@ -1,0 +1,5 @@
+form.task-adder__form((submit)="addTask($event)", (keydown.enter)="onFormEnterKey($event)")
+  textarea.task-adder__input(type="text", placeholder="Добавить задачу", [(ngModel)]="text", name="taskText", #input,
+            autocomplete="off")
+  button.task-adder__submit-button(type="submit")
+

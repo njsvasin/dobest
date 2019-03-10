@@ -1,0 +1,27 @@
+[
+  {
+    "text": "Сделать LocalStorageService",
+    "pattern": "default",
+    "done": true
+  },
+  {
+    "text": "Сделать удаление задач",
+    "pattern": "fire",
+    "done": false
+  },
+  {
+    "text": "Сделать сохранение цвета задачи в Task",
+    "pattern": "default",
+    "done": true
+  },
+  {
+    "text": "сделать задачи с временем",
+    "pattern": "progress",
+    "done": false
+  },
+  {
+    "text": "сделать сохранение статуса задачи",
+    "pattern": "default",
+    "done": true
+  }
+]

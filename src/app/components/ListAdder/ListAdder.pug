@@ -1,0 +1,5 @@
+form.list-adder__form((submit)="addList($event)")
+  input.list-adder__input(type="text", placeholder="Добавить свой список", [(ngModel)]="text", name="listText",
+    (blur)="onBlur()", #input, autocomplete="off")
+  button.list-adder__submit-button(type="submit")
+

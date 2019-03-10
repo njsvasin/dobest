@@ -1,0 +1,3 @@
+.task__text {{task.text}}
+
+c-checkbox([checked]="task.done", (change)="changeDone($event)", (click)="$event.stopPropagation()")

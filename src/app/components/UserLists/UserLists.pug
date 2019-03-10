@@ -1,0 +1,8 @@
+list-adder
+
+.user-lists__container
+  user-list(*ngFor="let list of listService.lists; let i = index;",
+    [list]="list", [active]="list.active", (click)="onClick(i)", [disableMoving]="i === 0" )
+
+  .user-lists__add-button-container
+    button.user-lists__add-button((click)="addList()")

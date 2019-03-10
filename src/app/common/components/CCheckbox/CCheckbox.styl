@@ -1,0 +1,45 @@
+@import '../../styl/variables.styl'
+
+.c-checkbox
+  position relative
+  z-index $z-index--above
+  display flex
+  align-items center
+  cursor pointer
+  user-select none
+
+  &__checkbox
+    position absolute
+    opacity 0
+    width 0
+    height 0
+    cursor pointer
+
+    &:checked ~ .c-checkbox__checkmark::after
+        display block
+
+  &__text
+    flex 1
+
+  &__checkmark
+    position relative
+    width $indent-6
+    height $indent-6
+    border-radius $border-radius-s
+    border $border-grey
+    background-color $color-grey-light
+
+    &::after
+      content ""
+      position absolute
+      display none
+      top $indent-2
+      left $indent-4
+      width $indent-3
+      height $indent-7
+      border solid $color-blue
+      border-width 0 3px 3px 0
+      transform translate(-50%, -50%) rotate(45deg)
+
+  .task--minified &
+    display none

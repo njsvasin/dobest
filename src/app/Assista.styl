@@ -1,0 +1,29 @@
+@import 'common/styl/variables.styl'
+
+.assist-a
+  display flex
+  flex-direction column
+  min-height 100vh
+  max-width $indent-100
+  margin auto
+
+  &__content
+    flex auto
+    display flex
+    flex-direction column
+
+  &__header
+    padding $indent-2 $indent-body-padding 0
+    margin 0
+    color $color-orange
+    text-align center
+    font-size 1.2em
+
+
+  &__version
+    display inline-block
+    margin 0 0 0 $indent-3
+    color $color-grey-darker
+    text-align center
+    font-size 0.7em
+    font-weight normal

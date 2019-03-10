@@ -1,0 +1,43 @@
+@import '../../common/styl/variables.styl'
+
+.task-adder
+  display block
+  padding $indent-2 $indent-body-padding
+  position sticky
+  top 0
+  z-index $z-index--above-2
+  background-color $color-white
+
+  &__form
+    position relative
+
+  &__input
+    box-sizing border-box
+    width 100%
+    height $indent-10
+    padding $indent-2 $indent-10 $indent-2 $indent-2
+    border $border-grey
+    border-radius $border-radius-s
+    font-size 16px
+    cursor pointer
+
+  &__submit-button
+    position absolute
+    top 50%
+    right 0
+    transform translateY(-50%)
+    width $indent-10
+    height 100%
+    border none
+    background-color transparent
+    cursor pointer
+    resize none
+
+    &::after
+      content '>'
+      display block
+
+    &:active
+    &:focus
+      outline none
+

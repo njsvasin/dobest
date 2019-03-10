@@ -1,0 +1,2 @@
+ng-container(*ngFor="let date of listService.dates; let i = index;")
+  calendar-date([moment]="date.moment", [active]="date.active", [today]="date.today", (click)="onClick(i)")

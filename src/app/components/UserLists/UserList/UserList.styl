@@ -1,0 +1,22 @@
+@import '../../../common/styl/variables.styl'
+
+.user-list
+  display inline-block
+  padding $indent-1
+  margin-right $indent-2
+  border 1px dashed transparent
+  border-radius $border-radius-s
+  background-color $color-blue-x-light
+  text-align center
+  white-space nowrap
+  user-select none
+  cursor pointer
+
+  &:first-child
+    margin-left $indent-body-padding
+
+  &--active
+    background-color $color-blue-light
+
+  &--ready-for-drop
+    border-color $color-orange

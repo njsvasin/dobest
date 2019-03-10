@@ -1,0 +1,28 @@
+@import 'app/common/styl/variables.styl'
+
+body
+input
+button
+  color $color-black
+  border-radius ($indent-2 / 2)
+  font-size 1.1em
+
+body
+  margin 0
+  padding 0
+  min-height 100vh
+  color $color-black
+  -webkit-tap-highlight-color transparent
+
+input
+textarea
+  display block
+  background-color transparent
+
+  &:hover
+  &:focus
+    outline none
+
+  &:focus
+    box-shadow $shadow-m-blue
+    border-color $color-blue

@@ -1,0 +1,16 @@
+@import '../../common/styl/variables.styl'
+
+.calendar-dates
+  display flex
+  position sticky
+  z-index $z-index--above-2
+  top 56px
+  padding $indent-2 0
+  margin-bottom $indent-3
+  background-color $color-white
+  box-shadow $shadow-m-bottom
+  overflow auto
+
+
+  &:focus
+    outline none
